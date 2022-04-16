@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="skate, aprenda, noticias, olimpiadas, skatistas, campeonatos">
+    <meta name="description" content="Aprenda e fique por dentro de tudo o que acontece no mundo do skate">
+    <meta name="robots" content="index, follow">
+    <title>Skate or Die</title>
+    <link rel="icon" href="img/logo.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body onload="abrirModal();">
+    <header id="header">
+        <img id="header__logo" src="img/logo.png" alt="">
+        <button id="header__btn-responsivo">
+            <a href="#header__menu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></a>
+        </button>
+        <nav id="header__menu">
+            <ul>
+                <a id="header__menu__responsivo-fechar" href="#">X</a>
+                <li><a href="#">HOME</a></li>
+                <li><a href="https://www.esportelandia.com.br/skate/tudo-sobre-skate/" target="_blank">MODALIDADES</a>
+                </li>
+                <li><a href="https://matrizskateshop.com.br/" target="_blank">LOJA</a></li>
+                <li>
+                    <a href="https://federacaoskatepr.com.br/federacao/historia-do-skate-no-mundo/" target="_blank">SOBRE</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <figure id="banner"></figure>
+    <div id="cortina">
+        <div id="modal">
+            <form id="formulario" action="post">
+                <a href="#" onclick="fecharModal()" id="formulario__fechar">X</a>
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber noticias diarias sobre o skate</p>
+                <label for="formulario__nome">Nome</label>
+                <input type="text" id="formulario__nome" placeholder="Seu nome" required="required" name="nome"/>
+
+                <label for="formulario__sobrenome">Sobrenome</label>
+                <input type="text" id="formulario__sobrenome" placeholder="Seu sobrenome" name="sobrenome" required="required"/>
+
+                <label for="formulario__fone">Fone</label>
+                <input type="tel" id="formulario__fone" placeholder="(xx)xx-xx-xx-xx" name="fone" required="required" />
+
+                <label for="formulario__email">Email</label>
+                <input type="email" id="formulario__email" placeholder="Seu email" name="email" required="required"/>
+
+                <label for="formulario__sugestao">Deixe uma sugestão de melhora</label>
+                <textarea id="formulario__sugestao"
+                    placeholder="Deixe uma sugestão de conteudo para nós, seu feedback é muito valioso"></textarea>
+
+                <input type="button" onclick="validar();" value="Enviar" />
+            </form>
+        </div>
+    </div>
+    <main id="principal">
+        <section>
+            <h1>ULTIMAS NOTICIAS DO SKATE</h1>
+            <div id="principal__noticias">
+                <div class="card principal__noticias__card cor__card">
+                    <img src="img/kelvin.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">De volta pra casa</h3>
+                        <p class="card-text">Kelvin Hoefler, prata no skate na Olimpíada de Tóquio, chega a Guarujá e
+                            revê pais pela 1ª vez após competição</p>
+                    </div>
+                </div>
+                <div class="card principal__noticias__card cor__card">
+                    <img src="img/rayssa.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Reconhecimento merecido</h3>
+                        <p class="card-text">Imprensa internacional repercute adolescentes vitoriosas no skate em
+                            Tóquio, entre elas a brasileira Rayssa Leal</p>
+                    </div>
+                </div>
+                <div class="card principal__noticias__card cor__card">
+                    <img src="img/skate-rio.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Impacto das olimpiadas</h3>
+                        <p class="card-text">Prefeitura do Rio inicia vistoria de pistas de skate da cidade na
+                            terça-feira</p>
+                    </div>
+                </div>
+            </div>
+            <div id="principal__noticias__rayssa">
+                <div class="card mb-3 cor__card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/olimpiadas.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Rayssa Leal</h3>
+                                <p class="card-text">Quem poderia imaginar que aquela menina vestida de fada fazendo
+                                    truques com um skate em Imperatriz-MA, que "viralizou" nas redes sociais há seis
+                                    anos, se tornaria a medalhista olímpica mais jovem da história do Brasil? O encanto
+                                    lançado por Rayssa Leal enfeitiçou o país, que passou as primeiras horas de
+                                    segunda-feira torcendo pela "Fadinha". Com a tranquilidade de uma veterana e uma
+                                    performance irrepreensível na final, a maranhense conquistou a segunda prata do
+                                    skate brasileiro e a terceira medalha do país em Tóquio.</p>
+                                <p class="card-text">Suas companheiras no pódio foram duas outras adolescentes, ambas
+                                    japonesas: Mojimi Nishiya, também de 13 anos, levou o ouro, e Funa Nakayama, de 16,
+                                    ficou com o bronze. As outras duas brasileiras da competição, Pâmela Rosa e Letícia
+                                    Bufoni, não confirmaram o favoritismo e nem sequer foram à final, terminando em 10º
+                                    e nono lugar, respectivamente. Após a eliminação, Pâmela revelou uma lesão séria no
+                                    tornozelo que a impediu de ter seu melhor desempenho.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>DESEMPENHO DO BRASIL NAS OLIMPIADAS</h2>
+            <div id="principal__olimpiadas__div">
+                <div id="carouselExampleCaptions" class="carousel slide principal__olimpiadas__div__cars"
+                    data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/ol1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/ol2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/ol3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <section id="principal__olimpiadas__div__txt">
+                    <h3>País do Skate</h3>
+                    <p>
+                        O Brasil é conhecido por ser o país do futebol. O skate, no entanto, deu muitas alegrias em sua
+                        estreia no programa olímpico. No total, foram 12 medalhas distribuídas nas modalidades park e
+                        street masculina e feminina.
+                    </p>
+                    <p>
+                        Dessas, três foram tingidas de verde e amarela: pratas de Kelvin Hoefler, Rayssa Leal, no
+                        street, e Pedro Barros, no park. O único país com desempenho ainda melhor foi o Japão. Os donos
+                        da casa receberam três dos quatro ouros disponíveis —só não levaram no park masculino, onde não
+                        teve nenhum representante na decisão. Além disso, levaram uma prata e um bronze, ficando com um
+                        total de cinco medalhas.
+                    </p>
+                </section>
+            </div>
+        </section>
+        <section>
+            <h2>CONHEÇA MAIS SOBRE AS MODALIDADES</h2>
+            <div id="principal__conheca">
+                <div class="card cor__card principal__conheca__card">
+                    <img src="img/park.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">SKATE PARK</h3>
+                        <p class="card-text">Combinando características de vários tipos de Pistas, como Half-Pipes,
+                            Bowls e Banks, o Skate Park apresenta inclinações verticais de 3 a 4 metros, com alguns
+                            obstáculos conectados entre si, para que os skatistas busquem executar sua melhor “linha”
+                            contínua de manobras “air” em sequência com o máximo de fluidez possível, com as mesmas
+                            regras eliminatórias da modalidade Street, que culminam em uma final com apenas 8
+                            classificados.</p>
+                    </div>
+                </div>
+                <div class="card cor__card principal__conheca__card">
+                    <img src="img/street.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">SKATE STREET</h3>
+                        <p class="card-text">O Skate Street surgiu entre o final da década de 1970 e início de 1980 nos
+                            Estados Unidos. A diferença dele para as outras modalidades é que ela é praticada em
+                            obstáculos da paisagem das cidades, como escadas, monumentos, bancos, muretas, corrimões,
+                            rampas, guias de calçadas, entre outros. Mas não é só nas ruas que o esporte é praticado.
+                            Existem pistas de skate que simulam a arquitetura urbana, possibilitando ao skatista passar
+                            pelas mesmas situações com mais segurança e sem causar maiores transtornos nas cidades.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="principal__outras">
+                <h2>OUTRAS MODALIDADES</h2>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item cor__card">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed cor__card" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Freestyle
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Modalidade mais antiga do skate, freestyle tem manobras feitas
+                                    em sequência, no chão. O maior responsável por inventar manobras foi Rodney Mullen.
+
+                                    Nas competições de freestyle regulamentadas pela Confederação Brasileira de Skate,
+                                    os
+                                    skatistas são avaliados em quatro quesitos:
+                                </p>
+                                <ul>
+                                    <li>Técnica</li>
+                                    <li>Consistência</li>
+                                    <li>Aspecto Artístico</li>
+                                    <li>Variedade</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item cor__card">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed cor__card" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Mega Rampa
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Criada pelo norte-americano Danny Way e aperfeiçoada pelo
+                                    brasileiro Bob Burnquist, é a modalidade de skate mais radical.
+
+                                    O skatista desce por uma rampa de quase 30 metros de altura, podendo atingir até 80
+                                    km/h.
+
+                                    Em seguida, passa voando por um vão de 20 metros de distância, aterrissando em outra
+                                    pista.
+
+                                    Por fim, encara um “quarter pipe” de 8 metros de altura, podendo atingir uma altura
+                                    de 8
+                                    metros de aéreo com manobras.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item cor__card">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed cor__card" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Vertical
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>O vertical é a modalidade de skate praticada em uma pista no
+                                    formato de U, chamada de halfpipe. As condições da pista podem ser variadas, com a
+                                    inclusão de rollins, canyons, extensões, trilhos, paredes e até corrimão.
+
+                                    As manobras podem ser aéreas ou deslizando pela borda metálica da pista.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>PRINCIPAIS CAMPEONATOS</h2>
+            <div id="principal__campeonatos">
+                <div class="card mb-3 cor__card principal__campeonatos__card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/x-games.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">X-Games</h3>
+                                <p class="card-text">X-Games
+                                    Transmitido pela ESPN desde a década de 1990, o X Games é o mais conhecido entre
+                                    todos os campeonatos de esportes radicais, colocando em disputa os maiores nomes
+                                    dessas modalidades. No skate, são disputadas oe eventos de vertical, park masculino
+                                    e feminino, street masculino e feminino, além de Big Air. Algumas das principais
+                                    manobras do skate foram apresentadas nos X Games, como o 900 de Tony Hawk. O
+                                    skatista brasileiro Bob Burnquist é o maior medalhista da história dos X Games.
+                                    Foram 14 ouros, 8 pratas e 8 bronzes, totalizando 30 medalhas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 cor__card principal__campeonatos__card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/sls.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">SLS</h3>
+                                <p class="card-text">A Street League Skateboarding é a primeira liga profissional de
+                                    skate. Criada em 2010 por Rob Dyrdek, a competição reúne os amantes da modalidade
+                                    mais praticada do mundo, o street. Nessa competição, cada manobra é avaliada
+                                    individualmente e não o conjunto todo, como é feito na maioria dos campeonatos de
+                                    skate. Para classificar as manobras, Dyrdek desenvolveu um sistema de computação. A
+                                    SLS oferece a maior premiação em dinheiro entre todas as competições do mundo e cada
+                                    etapa é disputada em uma cidade e/ou país diferente. Em 2019, Nyjah Huston foi
+                                    hexacampeão da Street League entre os homens. Já entre as mulheres, Pamela Rosa
+                                    ficou com o título, logo à frente da também brasileira Rayssa Leal. Letícia Bufoni e
+                                    Kelvin Hoefler também já foram campeões mundiais da SLS, ambos em 2015.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 cor__card principal__campeonatos__card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/wos.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">WCS</h3>
+                                <p class="card-text">A World Cup Skateboarding, ou Copa do Mundo de Skate, é uma
+                                    organização internacional de skate que hospeda as etapas do campeonatos mundial de
+                                    skate. A ideia da WCS nasceu em 1993, com Don Bostick. Embora a indústria do skate
+                                    estivesse em baixa, ele viu a necessidade de uma organização que englobasse mais do
+                                    que apenas a América do Norte e fosse uma entidade que funcionasse para os melhores
+                                    interesses dos skatistas. Após algumas conversas com Titus Dittman e Danielle
+                                    Bostick, a WCS iniciou seu primeiro evento em Vancouver, no Canadá, com o Slam City
+                                    Jam em maio de 1994. Vários brasileiros, entre homens e mulheres, já foram campeões
+                                    da WCS. Sandro Dias, o Mineirinho, levou o título em vertical em todos os anos entre
+                                    2003 e 2007, além de 2011. Também no vertical, Bob Burnquist foi o campeão de 2000 e
+                                    2008, enquanto Karen Jonz foi tetracampeã.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="rodape">
+        <h2>Siga-nos nas Redes-Sociais</h2>
+        <section id="rodape__redes-sociais">
+            <a href="https://www.facebook.com/ThrasherMagazine" target="_blank"><i
+                    class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/thrashermag/?hl=pt-br" target="_blank"><i
+                    class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/thrashermag" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.youtube.com/channel/UCt16NSYjauKclK67LCXvQyA" target="_blank"><i
+                    class="fab fa-youtube fa-2x"></i></a>
+        </section>
+        <section id="rodape__desenvolvido">
+            <address>
+                Desenvolvido por Fábio Soares & Pedro Barrim | Copyright &copy; 2021 Skate or Die
+            </address>
+        </section>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/funcoes.js"> </script>
+</body>
+
+</html>

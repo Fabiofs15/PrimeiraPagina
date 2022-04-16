@@ -1,0 +1,719 @@
+@charset 'UTF-8';
+
+/*ESTILOS UNIVERSAIS*/
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: absolute;
+    width: 100%;
+    background-color: #474956;
+}
+
+h1, h2{
+    text-align: center;
+    color: white;
+    font-size: 2.2em;
+    padding: 40px;
+}
+
+h3{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+p{
+    font-size: 1.2em;
+    color: white;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.cor__card{
+    background-color: #5E6472;
+}
+
+
+/*ESTILOS UNICOS*/
+
+#header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #1D1D24;
+}
+
+#header__logo {
+    padding: 5px 20px;
+    width: auto;
+    height: 100%;
+    float: left;
+}
+
+#header__btn-responsivo{
+    width: 50px;
+    height: 50px;
+    background-color: #5E6472;
+    border-radius: 5px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: none;
+}
+
+#menu:target {
+    height: 100%;
+    display: none;
+}
+
+#header__menu__responsivo-fechar {
+    float: right;
+    padding: 30px;
+    margin-top: -9px;
+    display: none;
+}
+
+#header__menu {
+    float: right;
+    width: 60%;
+    color: white;
+    height: 100%;
+}
+
+#header__menu>ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#header__menu>ul>li {
+    cursor: pointer;
+}
+
+#header__menu>ul li:hover {
+    transform: scale(1.2);
+}
+
+#header__menu>ul>li>a{
+    font-size: 1.4em;
+    text-decoration: none;
+    color: white;
+}
+
+#banner {
+    width: 100%;
+    height: 560px;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#fechar {
+    float: right;
+    margin: 20px;
+    color: white;
+}
+
+#cortina {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    transition: 1s;
+    display: none;
+}
+
+#modal {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-top: -1000px;
+    border-radius: 10px;
+    transition: 0.5s;
+    background-color: #1D1D24;
+    display: block;
+}
+
+#formulario{
+    padding: 20px;
+    margin:auto;
+    width: 95%;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#formulario > p{
+    text-align: center;
+}
+
+#formulario__fechar{
+    float: right;
+}
+
+#formulario input, #formulario textarea{
+    border-radius: 5px;
+    background-color: white;
+    max-width: 100%;
+}
+
+#formulario input::placeholder, #formulario textarea::placeholder{
+    color: grey;
+}
+
+
+#principal{
+    width: 100%;
+}
+
+#principal__noticias{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.principal__noticias__card{
+    width: 30%;
+}
+
+#principal__noticias__rayssa{
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#principal__olimpiadas__div{
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.principal__olimpiadas__div__cars{
+    width: 50%;
+}
+
+#principal__olimpiadas__div__txt{
+    width: 45%;
+    margin-right: 2.5%;
+
+}
+
+#principal__conheca{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.principal__conheca__card{
+    width: 45%;
+}
+
+#principal__outras{
+    width: 98%;
+    margin: auto;
+}
+
+#principal__outras button{
+    color: black;
+    font-size: 1em;
+}
+
+#principal__outras ul{
+    color: white;
+    font-size: 1.2em;
+}
+
+#principal__campeonatos{
+    width: 98%;
+    margin: auto;
+}
+
+#principal__campeonatos p{
+    font-size: 1em;
+}
+
+.principal__campeonatos__card{
+    width: 100%;
+}
+
+#rodape {
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    background-color: #1D1D24;
+}
+
+#rodape__redes-sociais {
+    color: white;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#rodape__redes-sociais>a {
+    height: 100%;
+    color: white;
+}
+
+i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#rodape__desenvolvido {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+#rodape__desenvolvido>address {
+    font-size: 1.1em;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+@media(max-width: 1650px){
+    h1, h2{
+        font-size: 2em;
+    }
+
+    h3{
+        font-size: 1.8em;
+    }
+
+    p{
+        font-size: 0.9em;
+    }
+
+    #header__menu>ul>li>a{
+        font-size: 1.2em;
+    }
+
+    #principal__outras button{
+        font-size: 0.8em;
+    }
+
+    #principal__outras ul{
+        font-size: 0.9em;
+    }
+
+    #principal__campeonatos p{
+        font-size: 0.78em;
+    }
+
+    #rodape__desenvolvido>address {
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 1366px){
+    h1, h2{
+        font-size: 1.8em;
+        padding: 30px;
+    }
+
+    h3{
+        font-size: 1.6em;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+
+    #header {
+        height: 80px;
+    }
+
+    #banner {
+        height: 470px;
+    }
+
+    #header__menu>ul>li>a{
+        font-size: 1.1em;
+    }
+
+    #principal__outras button{
+        font-size: 0.75em;
+    }
+
+    #principal__outras ul{
+        font-size: 0.8em;
+    }
+
+    #principal__campeonatos p{
+        font-size: 0.74em;
+    }
+}
+
+@media (max-width: 1280px) {
+    h1, h2{
+        font-size: 1.7em;
+    }
+
+    h3{
+        font-size: 1.2em;
+        padding: 5px;
+    }
+
+    p{
+        font-size: 0.7em;
+    }
+
+    #header__menu>ul>li>a{
+        font-size: 1em;
+    }
+
+    #banner {
+        height: 450px;
+    }
+
+    #principal__outras button{
+        font-size: 0.7em;
+    }
+
+    #principal__outras ul{
+        font-size: 0.7em;
+    }
+
+    #principal__campeonatos p{
+        font-size: 0.58em;
+    }
+
+    #rodape__redes-sociais {
+        height: 60px;
+    }
+}
+
+@media (max-width: 1024px) { 
+    h1, h2{
+        font-size: 1.4em;
+    }
+
+    h3{
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    p{
+        font-size: 0.6em;
+    }
+
+    #header__logo {
+        padding: 10px 15px;
+    }
+
+    #banner {
+        height: 400px;
+    }
+
+    
+
+    #principal__outras ul{
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 975px){
+    h1, h2{
+        font-size: 1.3em;
+    }
+
+    h3{
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    p{
+        font-size: 0.49em;
+    }
+
+    #header {
+        height: 65px;
+    }
+
+    #header__menu>ul>li>a{
+        font-size: 0.9em;
+    }
+
+    #banner {
+        height: 300px;
+    }
+
+    #modal {
+        width: 60%;
+    }
+
+    #principal__outras ul{
+        font-size: 0.49em;
+    }
+
+    #principal__campeonatos p{
+        font-size: 0.43em;
+    }
+
+    #rodape__redes-sociais {
+        height: 30px;
+    }
+
+    #rodape__desenvolvido>address {
+        font-size: 0.8em;
+    } 
+}
+
+@media (max-width: 767px){
+    h1, h2{
+        font-size: 1.3em;
+    }
+
+    h3{
+        font-size: 1.1em;
+        padding: 10px;
+    }
+
+    p{
+        font-size: 0.9em;
+    }
+
+    #header__btn-responsivo,
+    #header__menu__responsivo-fechar {
+        display: block;
+    }
+
+    #header__menu{
+        flex-flow: column wrap;
+        width: 100%;
+        height: 0%;
+        background-color: #1D1D24;
+        position: fixed;
+        overflow: hidden;
+    }
+
+    #header__menu>ul {
+        margin: 0px;
+        height: 100%;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+    }
+
+    #header__menu:target {
+        height: 100%;
+    }
+
+    #banner {
+        height: 250px;
+    }
+
+    #principal__noticias{
+        width: 98%;
+        flex-flow: column wrap;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .principal__noticias__card{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #principal__noticias__rayssa{
+        width: 78%;
+    }
+
+    #principal__olimpiadas__div{
+        width: 98%;
+        flex-flow: column wrap;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .principal__olimpiadas__div__cars{
+        width: 80%;
+    }
+    
+    #principal__olimpiadas__div__txt{
+        width: 80%;
+        margin-right: 0;
+    
+    }
+
+    #principal__conheca{
+        width: 98%;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+    
+    .principal__conheca__card{
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    
+    #principal__outras{
+        width: 78%;
+        margin: auto;
+    }
+
+    #principal__outras button{
+        font-size: 1em;
+    }
+    
+    #principal__outras ul{
+        color: white;
+        font-size: 0.9em;
+    }
+
+    #principal__campeonatos{
+        width: 98%;
+        margin: auto;
+    }
+    
+    .principal__campeonatos__card{
+        width: 80%;
+        margin: auto;
+    }
+
+    #principal__campeonatos p{
+        font-size: 0.9em;
+    }
+    
+    #rodape__redes-sociais {
+        height: 100px;
+    }
+    
+    #rodape__redes-sociais>a {
+        height: 80%;
+    }
+    
+    #rodape__desenvolvido {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+    }
+    
+    #rodape__desenvolvido>address {
+        padding: 20px;
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 479px){
+    h1, h2{
+        font-size: 1.2em;
+    }
+
+    h3{
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+
+    #banner {
+        height: 220px;
+        background-position: center;
+        background-position: top;
+    }
+
+
+    #modal {
+        width: 70%;
+    }
+
+
+    .principal__noticias__card{
+        width: 95%;
+    }
+
+    #principal__noticias__rayssa{
+        width: 93%;
+    }
+
+    .principal__olimpiadas__div__cars{
+        width: 95%;
+    }
+    
+    #principal__olimpiadas__div__txt{
+        width: 95%;
+    
+    }
+
+    .principal__conheca__card{
+        width: 95%;
+    }
+    
+    #principal__outras{
+        width: 93%;
+    }
+
+    #principal__outras button{
+        font-size: 0.9em;
+    }
+    
+    #principal__outras ul{
+        font-size: 0.8em;
+    }
+
+    
+    .principal__campeonatos__card{
+        width: 95%;
+    }
+
+    #principal__campeonatos p{
+        font-size: 0.8em;
+    }
+    
+    #rodape__redes-sociais {
+        height: 80px;
+    }
+    
+    #rodape__redes-sociais>a {
+        height: 70%;
+    }
+    
+    
+    #rodape__desenvolvido>address {
+        padding: 20px;
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+
+
+
+
